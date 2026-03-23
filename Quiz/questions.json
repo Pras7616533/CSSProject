@@ -1,0 +1,102 @@
+[
+    {
+        "question": "What is the capital of India?",
+        "options": [
+            "Mumbai",
+            "Pune",
+            "Delhi",
+            "Chennai"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which language is used to style web pages?",
+        "options": [
+            "HTML",
+            "CSS",
+            "Java",
+            "Python"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "What does CPU stand for?",
+        "options": [
+            "Central Process Unit",
+            "Central Processing Unit",
+            "Computer Personal Unit",
+            "Control Processing Unit"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following is an input device?",
+        "options": [
+            "Monitor",
+            "Printer",
+            "Keyboard",
+            "Speaker"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What is the brain of the computer?",
+        "options": [
+            "RAM",
+            "Hard Disk",
+            "CPU",
+            "Monitor"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "What does HTML stand for?",
+        "options": [
+            "Hyperlinks and Text Markup Language",
+            "Hyper Text Markup Language",
+            "Home Tool Markup Language",
+            "Hyper Tool Multi Language"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following is a programming language?",
+        "options": [
+            "HTTP",
+            "FTP",
+            "Java",
+            "SMTP"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which tag is used to create a hyperlink in HTML?",
+        "options": [
+            "&lt;link&gt;",
+            "&lt;a&gt;",
+            "&lt;href&gt;",
+            "&lt;url&gt;"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which company developed Java?",
+        "options": [
+            "Microsoft",
+            "Apple",
+            "Sun Microsystems",
+            "Google"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following is not an operating system?",
+        "options": [
+            "Windows",
+            "Linux",
+            "Oracle",
+            "macOS"
+        ],
+        "answer": 2
+    }
+]

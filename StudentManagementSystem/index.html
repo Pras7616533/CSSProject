@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="logo">
+          <span class="logo__dot"></span>
+          <div>
+            <h2>EduPulse</h2>
+            <p>Student Hub</p>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#dashboard" class="nav__link active">Dashboard</a>
+          <a href="#student-form" class="nav__link">Add Student</a>
+          <a href="#student-table" class="nav__link">View Students</a>
+        </nav>
+        <div class="sidebar__footer">
+          <span class="tag">LocalStorage</span>
+          <p>Version 1.0</p>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <h1>Student Management</h1>
+            <p>Manage records, track progress, and keep everything organized.</p>
+          </div>
+          <div class="topbar__actions">
+            <div class="search">
+              <input type="text" id="searchInput" placeholder="Search by name or ID" />
+            </div>
+            <select id="filterCourse">
+              <option value="All">All Courses</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Business">Business</option>
+              <option value="Design">Design</option>
+              <option value="Engineering">Engineering</option>
+            </select>
+          </div>
+        </header>
+
+        <section id="dashboard" class="grid two">
+          <div class="card stat-card">
+            <h3>Total Students</h3>
+            <p id="totalStudents">0</p>
+          </div>
+          <div class="card stat-card">
+            <h3>Average Marks</h3>
+            <p id="avgMarks">0</p>
+          </div>
+        </section>
+
+        <section id="student-form" class="card form-card">
+          <div class="card__head">
+            <h2 id="formTitle">Add Student</h2>
+            <p>Fill in the details to add a new student record.</p>
+          </div>
+          <form id="studentForm">
+            <div class="grid three">
+              <label>
+                Student ID
+                <input type="text" id="studentId" placeholder="e.g. STU-102" required />
+              </label>
+              <label>
+                Name
+                <input type="text" id="studentName" placeholder="e.g. Aisha Khan" required />
+              </label>
+              <label>
+                Email
+                <input type="email" id="studentEmail" placeholder="name@email.com" required />
+              </label>
+              <label>
+                Course
+                <select id="studentCourse" required>
+                  <option value="">Select course</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Business">Business</option>
+                  <option value="Design">Design</option>
+                  <option value="Engineering">Engineering</option>
+                </select>
+              </label>
+              <label>
+                Marks
+                <input type="number" id="studentMarks" placeholder="0-100" min="0" max="100" required />
+              </label>
+            </div>
+            <div class="form-actions">
+              <button type="submit" id="submitBtn">Add Student</button>
+              <button type="button" class="ghost" id="resetBtn">Reset</button>
+            </div>
+          </form>
+        </section>
+
+        <section id="student-table" class="card table-card">
+          <div class="card__head">
+            <h2>Students List</h2>
+            <p>Manage, update, or remove student records instantly.</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Course</th>
+                  <th>Marks</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="studentTable"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal" id="confirmModal" aria-hidden="true">
+      <div class="modal__card">
+        <h3>Delete student?</h3>
+        <p>This action cannot be undone.</p>
+        <div class="modal__actions">
+          <button type="button" class="ghost" id="cancelDelete">Cancel</button>
+          <button type="button" class="danger" id="confirmDelete">Delete</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

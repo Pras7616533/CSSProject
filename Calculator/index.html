@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-dark">
+  <div class="app">
+    <header class="app__top">
+      <div class="brand">
+        <span class="brand__dot"></span>
+        NeonCalc
+      </div>
+      <div class="toggles">
+        <button class="toggle" id="modeToggle" type="button">Scientific</button>
+        <button class="toggle" id="themeToggle" type="button">Light</button>
+      </div>
+    </header>
+
+    <section class="calc">
+      <div class="display">
+        <div class="display__row">
+          <span class="badge" id="angleMode">DEG</span>
+          <span class="display__hint" id="statusHint">Ready</span>
+        </div>
+        <input id="display" class="display__input" type="text" readonly placeholder="0" />
+        <div class="display__result" id="result">0</div>
+      </div>
+
+      <div class="panel">
+        <div class="buttons" id="buttons">
+          <button class="btn func sci" data-type="func" data-value="sin">sin</button>
+          <button class="btn func sci" data-type="func" data-value="cos">cos</button>
+          <button class="btn func sci" data-type="func" data-value="tan">tan</button>
+          <button class="btn control" data-action="clear">C</button>
+          <button class="btn control" data-action="delete">⌫</button>
+
+          <button class="btn func sci" data-type="func" data-value="log">log</button>
+          <button class="btn func sci" data-type="func" data-value="ln">ln</button>
+          <button class="btn func sci" data-type="func" data-value="sqrt">√</button>
+          <button class="btn func" data-type="paren" data-value="(">(</button>
+          <button class="btn func" data-type="paren" data-value=")">)</button>
+
+          <button class="btn" data-type="number" data-value="7">7</button>
+          <button class="btn" data-type="number" data-value="8">8</button>
+          <button class="btn" data-type="number" data-value="9">9</button>
+          <button class="btn operator" data-type="operator" data-value="/">÷</button>
+          <button class="btn operator" data-type="operator" data-value="%">%</button>
+
+          <button class="btn" data-type="number" data-value="4">4</button>
+          <button class="btn" data-type="number" data-value="5">5</button>
+          <button class="btn" data-type="number" data-value="6">6</button>
+          <button class="btn operator" data-type="operator" data-value="*">×</button>
+          <button class="btn operator sci" data-type="operator" data-value="^">^</button>
+
+          <button class="btn" data-type="number" data-value="1">1</button>
+          <button class="btn" data-type="number" data-value="2">2</button>
+          <button class="btn" data-type="number" data-value="3">3</button>
+          <button class="btn operator" data-type="operator" data-value="-">−</button>
+          <button class="btn func sci" data-type="const" data-value="pi">π</button>
+
+          <button class="btn" data-type="number" data-value="0">0</button>
+          <button class="btn" data-type="decimal" data-value=".">.</button>
+          <button class="btn equals" data-action="equals">=</button>
+          <button class="btn operator" data-type="operator" data-value="+">+</button>
+          <button class="btn ghost" disabled></button>
+        </div>
+
+        <aside class="history" id="historyPanel">
+          <div class="history__header">
+            <span>History</span>
+            <button class="history__clear" id="clearHistory" type="button">Clear</button>
+          </div>
+          <ul class="history__list" id="historyList"></ul>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="../auth.js" data-login-path="../auth.html"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body data-auth-page="login">
+    <main class="auth-shell">
+      <section class="auth-card">
+        <div class="auth-head">
+          <span class="auth-badge">CSS Project Lab</span>
+          <h1>Sign in to continue</h1>
+          <p>Use any name and password to enter the project hub.</p>
+        </div>
+
+        <form id="loginForm" class="auth-form" data-redirect="index.html">
+          <label class="field">
+            <span>Display name</span>
+            <input type="text" id="loginName" placeholder="e.g. Priya" required />
+          </label>
+          <label class="field">
+            <span>Password</span>
+            <input type="password" id="loginPassword" placeholder="••••••••" required />
+          </label>
+          <button type="submit">Enter Workspace</button>
+          <p id="loginError" class="error" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="auth.js" data-login-path="auth.html"></script>
+  </body>
+</html>

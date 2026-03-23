@@ -1,91 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeatherSky - Premium weather forecast</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSSProject</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+  <body>
     <div class="app-container">
-        <header>
-            <div class="search-box">
-                <i class="fa-solid fa-location-dot"></i>
-                <input type="text" id="city-input" placeholder="Search city..." autocomplete="off">
-                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button id="location-btn" title="Current location"><i class="fa-solid fa-crosshairs"></i></button>
-            </div>
-            <div class="theme-toggle" id="theme-toggle">
-                <i class="fa-solid fa-moon"></i>
-            </div>
-        </header>
-
-        <main id="weather-content" class="hidden">
-            <section class="current-weather">
-                <div class="main-card">
-                    <div class="card-header">
-                        <h2 id="city-name">Khopoli, MH</h2>
-                        <p id="current-date">Monday, 9 Mar</p>
-                    </div>
-                    <div class="weather-info">
-                        <div class="temp-container">
-                            <span id="temperature">24</span><span class="unit">°</span>
-                        </div>
-                        <div class="condition-container">
-                            <img id="weather-icon" src="" alt="Weather" class="main-icon">
-                            <p id="weather-condition">Clear Sky</p>
-                        </div>
-                    </div>
-                    <div class="weather-details">
-                        <div class="detail-item">
-                            <i class="fa-solid fa-droplet"></i>
-                            <div class="detail-text">
-                                <span class="label">Humidity</span>
-                                <span id="humidity" class="value">42%</span>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fa-solid fa-wind"></i>
-                            <div class="detail-text">
-                                <span class="label">Wind</span>
-                                <span id="wind-speed" class="value">8 km/h</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="forecast-section">
-                <h3>5-Day Forecast</h3>
-                <div class="forecast-container" id="forecast-container">
-                    <!-- Cards injected here -->
-                </div>
-            </section>
-        </main>
-
-        <div id="loading" class="loading-spinner hidden">
-            <div class="spinner"></div>
-            <p>Gathering climate data...</p>
+      <header>
+        <div class="brand">
+          <span class="brand__dot"></span>
+          CSS Project Lab
         </div>
-
-        <div id="error-message" class="error-container hidden">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <p id="error-text">We couldn't find that city. Try another!</p>
-        </div>
-
-        <div id="welcome-message" class="welcome-container">
-            <i class="fa-solid fa-cloud-sun"></i>
-            <h2>WeatherSky</h2>
-            <p>Enter a city or use your location to see the magic happen.</p>
-        </div>
+        <p class="meta">Choose a mini app to explore polished UI patterns.</p>
+        <button class="logout" id="logoutBtn" type="button">Log out</button>
+      </header>
+      <main>
+        <a href="./weather/index.html" class="card">
+          <span class="card__title">Weather</span>
+          <span class="card__desc">Glassmorphism forecast with dynamic states.</span>
+          <span class="card__cta">Open</span>
+        </a>
+        <a href="./Calculator/index.html" class="card">
+          <span class="card__title">Calculator</span>
+          <span class="card__desc">Neon sci-calc with history and toggles.</span>
+          <span class="card__cta">Open</span>
+        </a>
+        <a href="./Quiz/index.html" class="card">
+          <span class="card__title">Quiz</span>
+          <span class="card__desc">Card-based MCQ flow with scoring.</span>
+          <span class="card__cta">Open</span>
+        </a>
+        <a href="StudentManagementSystem/index.html" class="card">
+          <span class="card__title">Student Management System</span>
+          <span class="card__desc">A simple system for managing student records.</span>
+          <span class="card__cta">Open</span>
+        </a>
+      </main>
+      <footer>
+        <span>Built with HTML + CSS</span>
+      </footer>
     </div>
-
-    <script src="script.js"></script>
-</body>
+    <script src="auth.js" data-login-path="auth.html"></script>
+  </body>
 </html>
